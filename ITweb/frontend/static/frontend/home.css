@@ -1,0 +1,10 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+#openTicketsCount, #recentTicketsList {
+    margin-top: 20px;
+}
