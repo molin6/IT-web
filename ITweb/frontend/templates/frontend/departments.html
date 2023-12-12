@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Department Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'frontend/departments.css' %}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <ul class="navbar">
+            <li><a href="{% url 'home' %}">Ticket Dashboard</a></li>
+            <li><a href="{% url 'departments' %}">Department Dashboard</a></li>
+        </ul>
+    </nav>
+
+    <div class="banner-heading">
+        <h2>Average Resolution Time by Department</h2>
+    </div>
+    <!-- Moving Banner Container -->
+    <div class="banner-container">
+        <div id="moving-banner" class="moving-banner"></div>
+    </div>
+
+    <div class="table-heading">
+        <h2>Department Information</h2>
+    </div>
+
+    <table id="departments-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email Address</th>
+                <th>Phone Number</th>
+            </tr>
+        </thead>
+        <tbody id="departments-table-body">
+            <!-- Department rows will be added here -->
+        </tbody>
+    </table>
+
+    <script src="{% static 'frontend/departments.js' %}" type="text/javascript"></script>
+</body>
+</html>

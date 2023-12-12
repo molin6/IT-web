@@ -8,9 +8,81 @@
     <link rel="stylesheet" type="text/css" href="{% static 'frontend/home.css' %}">
 </head>
 <body>
-    <h1>IT Ticketing Dashboard</h1>
-    <div id="openTicketsCount">Loading open tickets count...</div>
-    <div id="recentTicketsList">Loading recent tickets...</div>
+
+    <!-- Navbar -->
+    <nav>
+        <ul class="navbar">
+            <li><a href="{% url 'home' %}">Ticket Dashboard</a></li>
+            <li><a href="{% url 'departments' %}">Department Dashboard</a></li>
+        </ul>
+    </nav>
+    
+
+    <div id="ticket-indicators">
+        <div id="open-tickets">Open Tickets: <span id="open-count">0</span></div>
+        <div id="closed-tickets">Closed Tickets: <span id="closed-count">0</span></div>
+    </div>
+
+    <div id="ticket-filter">
+        <label for="status-filter">Filter by Status:</label>
+        <select id="status-filter">
+            <option value="all">All</option>
+            <option value="open">Open</option>
+            <option value="closed">Closed</option>
+        </select>
+    </div>
+    
+    <table id="tickets-table">
+        <thead>
+            <tr>
+                <th>Ticket ID</th>
+                <th>Subject</th>
+                <th>Ticket Category</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="tickets-table-body">
+            <!-- Ticket rows will be added here -->
+        </tbody>
+    </table>
+
+    <!-- <button id="new-ticket-button">New Ticket</button>
+
+    <div id="new-ticket-form" style="display: none;">
+        <form id="ticket-form">
+            <label for="user-id">User ID:</label>
+            <input type="number" id="user-id" name="user-id" required><br>
+
+            <label for="department-id">Department ID:</label>
+            <input type="number" id="department-id" name="department-id" required><br>
+
+            <label for="prior-ticket-id">Prior Ticket ID:</label>
+            <input type="number" id="prior-ticket-id" name="prior-ticket-id"><br>
+
+            <label for="ticket-category">Ticket Category:</label>
+            <input type="text" id="ticket-category" name="ticket-category" required><br>
+
+            <label for="open-date-time">Open Date Time:</label>
+            <input type="datetime-local" id="open-date-time" name="open-date-time" required><br>
+
+            <label for="close-date-time">Close Date Time:</label>
+            <input type="datetime-local" id="close-date-time" name="close-date-time"><br>
+
+            <label for="status">Status:</label>
+            <select id="status" name="status">
+                <option value="Active">Active</option>
+                <option value="Closed">Closed</option>
+            </select><br>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea><br>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required><br>
+
+            <input type="submit" value="Submit"> -->
+        </form>
+    </div>
 
     <script src="{% static 'frontend/home.js' %}" type="text/javascript"></script>
 </body>
