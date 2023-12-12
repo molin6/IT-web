@@ -2,7 +2,7 @@
 # IT-web
 
 ## Overview
-This project is closely integrated with the IT-Ticketing system API, which can be found in a separate repository [here](https://github.com/molin6/IT-Ticketing).
+This project is closely integrated with the IT-Ticketing system API, which can be found in a separate repository [here](https://github.com/molin6/IT-Ticketing/tree/main/Group%201%20Ticketing%20System%20API).
 
 ## Features
 The application includes several key features:
